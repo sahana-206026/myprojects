@@ -1,0 +1,20 @@
+{% extends 'jobs/base.html' %}
+{% block content %}
+
+<div class="form-container">
+    <div class="form-card" style="width: 600px;">
+        <h2>Your Applications</h2>
+
+        {% for app in applications %}
+            <p>
+                <strong>{{ app.job_title }}</strong><br>
+                Status: {{ app.status }}
+            </p>
+            <hr>
+        {% empty %}
+            <p>No applications found.</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

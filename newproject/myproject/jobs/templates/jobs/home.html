@@ -1,0 +1,14 @@
+{% extends 'jobs/base.html' %}
+{% block content %}
+
+<div class="hero">
+    <div class="card">
+        <h1>Job Application Board</h1>
+        <p>Register or login to apply for jobs and track your applications.</p>
+
+        <a href="{% url 'signup' %}" class="btn">Create Account</a>
+        <a href="{% url 'login' %}" class="btn">Login</a>
+    </div>
+</div>
+
+{% endblock %}

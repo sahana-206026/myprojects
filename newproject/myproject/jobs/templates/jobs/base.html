@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Board</title>
+    <link rel="stylesheet" href="{% static 'jobs/style.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <div><strong>JobBoard</strong></div>
+    <div>
+        <a href="{% url 'signup' %}">Register</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'apply' %}">Apply Job</a>
+        <a href="{% url 'list' %}">Applications</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+</div>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
