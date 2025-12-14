@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Your Dashboard</h2>
+
+    <div class="dashboard-card">
+        <p><strong>Username:</strong> {{ student.username }}</p>
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Roll Number:</strong> {{ student.roll_number }}</p>
+        <p><strong>Course:</strong> {{ student.course }}</p>
+        <p><strong>Department:</strong> {{ student.department }}</p>
+        <p><strong>Year of Study:</strong> {{ student.year_of_study }}</p>
+        <p><strong>Bio:</strong> {{ student.bio }}</p>
+    </div>
+
+    <br>
+    <a href="/logout/">
+        <button>Logout</button>
+    </a>
+</div>
+{% endblock %}

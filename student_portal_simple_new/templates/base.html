@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/register/">Register</a>
+    <a href="/login/">Login</a>
+    <a href="/dashboard/">Dashboard</a>
+</nav>
+<hr>
+
+{% if messages %}
+    <div class="container">
+        {% for message in messages %}
+            <div class="alert">{{ message }}</div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% block content %}{% endblock %}
+</body>
+</html>
