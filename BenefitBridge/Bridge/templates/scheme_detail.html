@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if scheme %}
+
+<h2 class="mb-3">{{ scheme.name }}</h2>
+<p class="text-muted">{{ scheme.desc }}</p>
+
+<hr>
+
+<h5>🎯 Benefits</h5>
+<ul>
+    {% for b in scheme.benefits %}
+    <li>{{ b }}</li>
+    {% endfor %}
+</ul>
+
+<h5>✅ Eligibility Criteria</h5>
+<ul>
+    {% for e in scheme.eligibility %}
+    <li>{{ e }}</li>
+    {% endfor %}
+</ul>
+
+<h5>📄 Required Documents</h5>
+<ul>
+    {% for d in scheme.documents %}
+    <li>{{ d }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ scheme.url }}" target="_blank" class="btn btn-primary mt-3">
+    Apply on Official Website
+</a>
+
+<a href="{% url 'schemes' %}" class="btn btn-outline-secondary mt-3 ms-2">
+    Back to Schemes
+</a>
+
+{% else %}
+<p>No scheme details found.</p>
+{% endif %}
+
+{% endblock %}

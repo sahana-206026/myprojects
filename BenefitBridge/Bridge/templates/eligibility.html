@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <!-- Page Heading -->
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Check Your Eligibility</h2>
+                <p class="text-muted">
+                    Answer a few questions to find government schemes you may be eligible for.
+                </p>
+            </div>
+
+            <!-- FORM CARD -->
+            <div class="card shadow-sm border-0 p-4">
+
+                <form method="GET" action="{% url 'schemes' %}">
+
+  <!-- Personal Details -->
+  <h5>👤 Personal Details</h5>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>Age</label>
+      <input type="number" name="age" class="form-control" required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label>Gender</label>
+      <select name="gender" class="form-control" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label>Category</label>
+    <select name="category" class="form-control" required>
+      <option value="">Select</option>
+      <option>General</option>
+      <option>OBC</option>
+      <option>SC</option>
+      <option>ST</option>
+    </select>
+  </div>
+
+  <!-- Income -->
+  <h5 class="mt-4">💰 Income & Work</h5>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>Annual Income</label>
+      <select name="income" class="form-control" required>
+        <option value="">Select</option>
+        <option value="below_2">Below ₹2 Lakhs</option>
+        <option value="2_5">₹2–5 Lakhs</option>
+        <option value="above_5">Above ₹5 Lakhs</option>
+      </select>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label>Employment Status</label>
+      <select name="employment" class="form-control">
+        <option>Unemployed</option>
+        <option>Farmer</option>
+        <option>Daily Wage</option>
+        <option>Private Job</option>
+        <option>Government Job</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Residence -->
+  <h5 class="mt-4">🏠 Residence</h5>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label>State</label>
+      <input type="text" name="state" class="form-control" required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label>Area</label>
+      <select name="area" class="form-control">
+        <option>Rural</option>
+        <option>Urban</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- BUTTON -->
+  <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">
+    🔍 Find Schemes
+  </button>
+  <div class="mb-3">
+    <label class="form-label">Get Notifications Via</label>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="notify_email" id="email">
+        <label class="form-check-label" for="email">
+            Email
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="notify_sms" id="sms">
+        <label class="form-check-label" for="sms">
+            SMS (Coming Soon)
+        </label>
+    </div>
+</div>
+<div class="mb-3">
+    <label class="form-label">Email (optional)</label>
+    <input type="email" name="email" class="form-control"
+           placeholder="Enter email for notifications">
+</div>
+
+<div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" name="notify" id="notify">
+    <label class="form-check-label" for="notify">
+        Notify me when new schemes are added
+    </label>
+</div>
+
+
+
+</form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

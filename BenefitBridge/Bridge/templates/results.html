@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="fw-bold mb-4">Eligible Schemes</h2>
+
+<div class="row g-4">
+
+    {% for scheme in schemes %}
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="card h-100 shadow-sm border-0">
+
+            <div class="card-body">
+                <h5 class="card-title fw-bold">{{ scheme.name }}</h5>
+
+                <p class="card-text text-muted mt-2">
+                    {{ scheme.desc }}
+                </p>
+
+                {% if scheme.reason %}
+                <p class="text-success small mt-3">
+                    ✅ {{ scheme.reason }}
+                </p>
+                {% endif %}
+            </div>
+
+            <div class="card-footer bg-white border-0 d-flex justify-content-between">
+                <a href="/scheme/{{ forloop.counter }}/" class="btn btn-outline-primary btn-sm">
+    View Details
+</a>
+
+                <button class="btn btn-light btn-sm">
+                    ⭐ Save
+                </button>
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

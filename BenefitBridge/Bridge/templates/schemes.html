@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+{% if request.session.notify_email %}
+<div class="alert alert-success">
+    🔔 You will be notified at <b>{{ request.session.notify_email }}</b>
+    when new schemes are added.
+</div>
+{% endif %}
+
+
+<!-- 🔔 NOTIFICATION BANNER -->
+{% if new_scheme %}
+<div class="alert alert-success">
+    🎉 A new government scheme was recently added. Please check your eligibility!
+</div>
+{% endif %}
+
+{% if request.session.notify_email %}
+<div class="alert alert-info">
+    🔔 You’ll be notified when new schemes are added.
+</div>
+{% endif %}
+
+<!-- PAGE WRAPPER -->
+<div class="page-animate">
+
+    <h2 class="mb-4">Eligible Schemes for You</h2>
+
+    <div class="row g-4">
+        {% for s in schemes %}
+        <div class="col-md-6">
+
+            <div class="card scheme-card shadow-sm h-100">
+                <div class="card-body">
+
+                    <h5 class="card-title">{{ s.name }}</h5>
+                    <p class="text-muted">{{ s.desc }}</p>
+
+                    <p class="text-success">
+                        ✅ {{ s.reason }}
+                    </p>
+
+                    <!-- VIEW DETAILS -->
+                    <a href="{% url 'scheme_detail' s.id %}"
+                       class="btn btn-outline-primary btn-sm">
+                        View Details
+                    </a>
+
+                    <!-- SAVE -->
+                    <a href="?save={{ s.id }}"
+                       class="btn btn-outline-success btn-sm ms-2">
+                        ⭐ Save
+                    </a>
+
+                    <!-- APPLY -->
+                    <a href="{{ s.url }}"
+                       target="_blank"
+                       class="btn btn-primary btn-sm ms-2">
+                        Apply Now
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

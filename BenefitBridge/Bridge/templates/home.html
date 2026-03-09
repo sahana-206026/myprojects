@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="container hero-section">
+  <div class="row align-items-center">
+
+    <!-- LEFT CONTENT -->
+    <div class="col-md-6">
+      <h1 class="fw-bold display-5 text-primary">
+        Don’t Miss Government Benefits
+      </h1>
+
+      <p class="fs-5 text-muted mt-3">
+        BenefitBridge helps citizens—especially rural communities—discover
+        government schemes they are eligible for in a simple and transparent way.
+      </p>
+
+      <ul class="mt-4 fs-6">
+        <li>✔ Personalized scheme recommendations</li>
+        <li>✔ Official government application links</li>
+        <li>✔ SMS & Email alerts</li>
+      </ul>
+
+      <a href="{% url 'eligibility' %}" class="btn btn-primary btn-lg mt-4">
+        Check My Eligibility →
+      </a>
+    </div>
+
+    <!-- RIGHT ANIMATION -->
+    <div class="col-md-6 hero-animation">
+      <lottie-player
+        src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay>
+      </lottie-player>
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<!-- HOW IT WORKS -->
+<section class="text-center my-5">
+  <h2 class="fw-bold mb-4">How BenefitBridge Works</h2>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card p-4 shadow-sm">
+        <h4>📝 Enter Details</h4>
+        <p class="text-muted">
+          Provide basic information like age, income, category, and location.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-4 shadow-sm">
+        <h4>🔍 Get Eligible Schemes</h4>
+        <p class="text-muted">
+          Instantly see government schemes matched to your profile.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-4 shadow-sm">
+        <h4>🚀 Apply Easily</h4>
+        <p class="text-muted">
+          Use official links and step-by-step guidance to apply.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- FEATURES -->
+<section class="my-5">
+  <h2 class="fw-bold text-center mb-4">Why BenefitBridge?</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card p-3 text-center shadow-sm">
+        <h5>🎯 Personalized Feed</h5>
+        <p class="text-muted">Schemes tailored to each user</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 text-center shadow-sm">
+        <h5>🌍 Location Based</h5>
+        <p class="text-muted">State & rural specific schemes</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 text-center shadow-sm">
+        <h5>🔔 Notifications</h5>
+        <p class="text-muted">SMS & Email alerts</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card p-3 text-center shadow-sm">
+        <h5>🔖 Save Schemes</h5>
+        <p class="text-muted">Bookmark and revisit anytime</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- RURAL FOCUS -->
+<section class="my-5 text-center">
+  <h2 class="fw-bold">Built for Rural India 🇮🇳</h2>
+  <p class="fs-5 text-muted mt-3">
+    Simple language • Multi-language support • Low data usage • Mobile friendly
+  </p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="text-center my-5">
+  <h2 class="fw-bold mb-3">Start Finding Your Benefits Today</h2>
+  <a href="{% url 'eligibility' %}" class="btn btn-primary btn-lg px-5">
+    Find My Schemes
+  </a>
+</section>
+
+{% endblock %}
