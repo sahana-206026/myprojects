@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
+# Future Focus
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/ce6ba91b-c4cb-4d48-aec5-45b992397765
+Future Focus is a web-based platform designed to help students easily discover useful educational and career-related websites. The platform organizes helpful tools for academic tasks such as creating presentations, reading PDFs, editing media, and preparing for interviews.
 
-## How can I edit this code?
+The goal of Future Focus is to save students time by providing a centralized place where they can quickly find reliable websites for learning, productivity, and career development.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+* Search functionality to quickly find useful websites
+* Educational resources for presentations, PDFs, and learning tools
+* Career resources including job portals and resume builders
+* Interview preparation section with commonly asked questions
+* Favorites feature to save preferred websites for quick access
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ce6ba91b-c4cb-4d48-aec5-45b992397765) and start prompting.
+## Technologies Used
 
-Changes made via Lovable will be committed automatically to this repo.
+This project is built using modern web technologies:
 
-**Use your preferred IDE**
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn-ui
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
+Future Focus
+│
+├── src
+│   ├── components
+│   ├── pages
+│   ├── assets
+│   └── main.tsx
+│
+├── public
+├── package.json
+└── index.html
+```
 
-Follow these steps:
+## Installation and Setup
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```
+git clone https://github.com/sahana-206026/myprojects.git
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Navigate to the project folder
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```
+cd thrive-future-portal-576b5bf6-main
+```
+
+3. Install dependencies
+
+```
+npm install
+```
+
+4. Run the development server
+
+```
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+After running the server, open the local URL shown in the terminal to view the project.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Future Improvements
 
-**Use GitHub Codespaces**
+* AI-powered website recommendations
+* User accounts for personalized favorites
+* More categorized educational resources
+* Mobile app version of the platform
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Author
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ce6ba91b-c4cb-4d48-aec5-45b992397765) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Sahana Narsingoju
